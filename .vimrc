@@ -8,6 +8,7 @@ set backupdir^=$HOME/tmp//
 :set number
 syntax enable
 colorscheme molokai
+set cursorline
 
 " indentation
 set tabstop=4
@@ -43,6 +44,13 @@ filetype plugin indent on
 :map <leader>i <esc>gg=G<CR>
 
 
+" status line
+set laststatus=2 " display always
+set statusline+=%f
+set statusline+=%y
+
+
+
 
 " syntastic settings
 set statusline+=%#warningmsg#
@@ -54,9 +62,13 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-
 " resize panes
 :map <leader><Left> vertical resize -10
 :map <leader><Right> vertical resize +10
 :map <leader><Up> resize +10
 :map <leader><Down> resize -10
+
+
+
+
+
